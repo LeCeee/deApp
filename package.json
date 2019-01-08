@@ -19,6 +19,10 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
+<<<<<<< HEAD
     "socket.io": "^2.2.0"
+=======
+    "path": "^0.12.7"
+>>>>>>> 01e71f06e9c30c4ac28d614caa1f4e6886a248c6
   }
 }

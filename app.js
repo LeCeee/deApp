@@ -6,6 +6,7 @@ var bodyparser = require("body-parser");
 var local = require("passport-local");
 var passportlocalmongoose = require("passport-local-mongoose");
 var user = require("./models/user");
+var path = require("path");
 var app = express();
 var http = require('http').Server(app);
 var methodOveride= require("method-override");
