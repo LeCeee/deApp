@@ -70,10 +70,6 @@ function askQuestion() {
     quiz[currentQuestion].question;
 
     // load the choices
-    if(currentQuestion==quiz.length - 1){
-        choicesHtml="";
-        quiz[currentQuestion].choices=[];
-    }
     choicesContainer.innerHTML = choicesHtml;
 }
 
@@ -93,25 +89,10 @@ function checkAnswer() {
     } else {
         showFinalResults();
     }
+
 }
 
 function showFinalResults() {
-    var result = "";
-    if(score<5){
-       result= "<h2>None</h2>";
-    }
-    else if(score<10){
-        result="<h2>Mild</h2>";
-    }
-    else if(score<15){
-        result="<h2>Moderate</h2>";
-    }
-    else if(score<20){
-        result="<h2>Moderately severe</h2>";
-    }
-    else if(score<28){
-         result="<h2>Severe</h2>";
-    }
     var resultString = "";
     for (var i = 0; i < 1; i += 1) {
         resultString += (i + 1) + ". " + score + "<br />";
@@ -120,10 +101,7 @@ function showFinalResults() {
     content.innerHTML =
      "<h2>You've completed the quiz!</h2>" +
     "<h2>Below are your results:</h2>" +
-    resultString + result;
-    
-    choicesContainer.innerHTML= "";
-    content.innerHTML= "";
+    resultString;
 }
 
 window.addEventListener("load", askQuestion, false);
