@@ -95,7 +95,12 @@ function isloggedin(req,res,next){
 app.get("/chat",function(req,res){
     res.render("chat");
 });
-
+app.get("/chat",function(req,res){
+    res.render("chat");
+});
+app.get("/social",function(req,res){
+    res.render("social");
+});
 
 // var io = require('socket.io')(http);
 // app.get('/', function(req, res){
