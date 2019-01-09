@@ -40,6 +40,10 @@ app.use(function(req,res,next){           //A middleware that will run on each a
 
 app.use(methodOveride("_method"));
  
+app.get("/",function(req,res){
+    res.render("home");
+});
+
 app.get("/register",function(req,res){
     res.render("register");
 })
@@ -62,12 +66,17 @@ app.get("/login",function(req,res){
 app.get("/quiz",function(req,res){
     res.render("quiz");
 })
-
+app.get("/About",function(req,res){
+    res.render("about");
+})
 app.post("/login",passport.authenticate("local",{
-     successRedirect:"/quiz",
-     failureRedirect:"/login"
+     successRedirect:"/test",
+     failureRedirect:"/register"
 }),
 function(req,res){});
+app.get("/test",function(req,res){
+    res.render("test");
+})
 app.get("/logout",function(req,res){
     req.logout();
     req.flash("success","logged you out");
