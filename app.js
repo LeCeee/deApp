@@ -39,11 +39,11 @@ app.use(function(req,res,next){           //A middleware that will run on each a
 })
 
 app.use(methodOveride("_method"));
- 
+
 app.get("/",function(req,res){
     res.render("home");
-});
-
+})
+ 
 app.get("/register",function(req,res){
     res.render("register");
 })
@@ -66,7 +66,7 @@ app.get("/login",function(req,res){
 app.get("/quiz",function(req,res){
     res.render("quiz");
 })
-app.get("/About",function(req,res){
+app.get("/about",function(req,res){
     res.render("about");
 })
 app.post("/login",passport.authenticate("local",{
@@ -76,6 +76,9 @@ app.post("/login",passport.authenticate("local",{
 function(req,res){});
 app.get("/test",function(req,res){
     res.render("test");
+})
+app.get("/dashboard",function(req,res){
+    res.render("dashboard");
 })
 app.get("/logout",function(req,res){
     req.logout();
@@ -94,20 +97,20 @@ app.get("/chat",function(req,res){
 });
 
 
-var io = require('socket.io')(http);
-app.get('/', function(req, res){
-  res.sendfile('index.html');
-});
-io.on('connection', function(socket){
-  console.log('user connected');
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
-});
-http.listen(3000, function(){
-  console.log('listening on *:3000');
-});
+// var io = require('socket.io')(http);
+// app.get('/', function(req, res){
+//   res.sendfile('index.html');
+// });
+// io.on('connection', function(socket){
+//   console.log('user connected');
+//   socket.on('chat message', function(msg){
+//     io.emit('chat message', msg);
+//   });
+//   socket.on('disconnect', function(){
+//     console.log('user disconnected');
+//   });
+// });
+// http.listen(3000, function(){
+//   console.log('listening on *:3000');
+// });
 app.listen(process.env.PORT,process.env.IP);
