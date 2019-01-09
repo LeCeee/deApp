@@ -113,4 +113,8 @@ app.get("/chat",function(req,res){
 // http.listen(3000, function(){
 //   console.log('listening on *:3000');
 // });
-app.listen(process.env.PORT,process.env.IP);
+http.listen(3000,() => {
+    console.log("lisenting");
+    
+});
+// app.listen(process.env.PORT,process.env.IP);

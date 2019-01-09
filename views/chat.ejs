@@ -1,19 +1,84 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Socket.IO chat</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="/lib/angular/angular.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js">
-    </script>
-    <script src="/js/app.js"></script>
-  </head>
-  <body ng-controller="mainController">
-    <ul id="messages"></ul>
-    <div>
-      <input id="m" ng-model="message" autocomplete="off" />
-      <button ng-click="send()">Send</button>
-    </div>
-  </body>
-</html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://use.fontawesome.com/1e803d693b.js"></script>
+<style>
+i {  vertical-align: middle; }
+.table-users tbody tr:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+.nav-user-photo {
+     vertical-align: middle;
+}
+.user_panel {
+    width: 50%;
+}
+</style>
+
+<div class="container">
+	<div class="row">
+        <div class="panel panel-default user_panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">User List</h3>
+            </div>
+            <div class="panel-body">
+				<div class="table-container">
+                    <table class="table-users table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="10" align="center">
+                                    <i class="fa fa-2x fa-user fw"></i>
+                                </td>
+                                
+                                  <td>
+                                      <a href="http://localhost:8000/">Bee</a>
+                                  </td>
+                               
+                                <td align="center">
+                                    Online<br><small class="text-muted">Now</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10" align="center">
+                                    <i class="fa fa-2x fa-user fw"></i>
+                                </td>
+                                <td>
+                                    xyz
+                                  </td>
+                                <td align="center">
+                                    Online<br><small class="text-muted">Now</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10" align="center">
+                                    <i class="fa fa-2x fa-user fw"></i>
+                                </td>
+                                <td>
+                                    Bajdfe
+                                  </td>
+                                <td align="center">
+                                    Last Login:  6/14/2017<br><small class="text-muted">2 days ago</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10">
+                                    <img class="pull-left img-circle nav-user-photo" width="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhcCYW4QDWMOjOuUTxOd50KcJvK-rop9qE9zRltSbVS_bO-cfWA" />  
+                                </td>
+                                <td>
+                                    adjbnf
+                                  </td>
+                                <td align="center">
+                                    Last Login:  6/10/2017<br><small class="text-muted">5 days ago</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+	</div>
+</div>

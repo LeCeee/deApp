@@ -42,6 +42,7 @@ var quiz = [
 // init vars
 var currentQuestion = 0,
     score = 0;
+// var x = document.getElementById('cont');
 
 function $(id) { // shortcut for document.getElementById
     return document.getElementById(id);
@@ -54,6 +55,7 @@ var content = $("content"),
     submitBtn = $("submitBtn");
 
     var quizC = document.getElementById("quizContainer");
+// x.style.visibility = 'hidden';
 
 function askQuestion() {
     var choices = quiz[currentQuestion].choices,
@@ -75,6 +77,7 @@ function askQuestion() {
     choicesContainer.innerHTML = choicesHtml;
 }
 function showFinalResults() {
+    x.style.visibility = 'visible';
     quizC.style.display = 'none';
     var resultString = "";
     for (var i = 0; i < 1; i += 1) {
